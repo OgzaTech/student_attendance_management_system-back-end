@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teachers",
+  "info": {
+    "singularName": "teacher",
+    "pluralName": "teachers",
+    "displayName": "Teacher",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "surname": {
+      "type": "string",
+      "required": true
+    },
+    "card_id": {
+      "type": "biginteger",
+      "required": true
+    },
+    "departmant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::departmant.departmant"
+    },
+    "school": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::school.school"
+    },
+    "program": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::program.program"
+    }
+  }
+}

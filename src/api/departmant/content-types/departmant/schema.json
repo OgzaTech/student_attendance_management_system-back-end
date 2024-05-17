@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "departmants",
+  "info": {
+    "singularName": "departmant",
+    "pluralName": "departmants",
+    "displayName": "Departmant",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "school": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::school.school"
+    }
+  }
+}

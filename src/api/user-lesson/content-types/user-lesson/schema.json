@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_lessons",
+  "info": {
+    "singularName": "user-lesson",
+    "pluralName": "user-lessons",
+    "displayName": "User_lesson",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::student.student"
+    },
+    "program": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::program.program"
+    },
+    "lesson": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::lesson.lesson"
+    },
+    "term": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::term.term"
+    }
+  }
+}

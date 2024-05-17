@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lessons_schedulers",
+  "info": {
+    "singularName": "lessons-scheduler",
+    "pluralName": "lessons-schedulers",
+    "displayName": "lessons_scheduler",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "start_time": {
+      "type": "datetime",
+      "required": true
+    },
+    "finish_time": {
+      "required": true,
+      "type": "datetime"
+    },
+    "term": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::term.term"
+    },
+    "lessons": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lesson.lesson",
+      "mappedBy": "lessons_scheduler"
+    }
+  }
+}

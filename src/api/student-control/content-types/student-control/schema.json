@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "student_controls",
+  "info": {
+    "singularName": "student-control",
+    "pluralName": "student-controls",
+    "displayName": "Student_control",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "start": {
+      "type": "datetime",
+      "required": true
+    },
+    "end": {
+      "type": "datetime",
+      "required": true
+    },
+    "lessons_scheduler": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::lessons-scheduler.lessons-scheduler"
+    }
+  }
+}

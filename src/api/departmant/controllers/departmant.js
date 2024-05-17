@@ -1,0 +1,9 @@
+'use strict';
+
+/**
+ * departmant controller
+ */
+
+const { createCoreController } = require('@strapi/strapi').factories;
+
+module.exports = createCoreController('api::departmant.departmant');
