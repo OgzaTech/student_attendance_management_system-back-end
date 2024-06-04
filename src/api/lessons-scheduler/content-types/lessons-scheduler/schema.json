@@ -4,7 +4,7 @@
   "info": {
     "singularName": "lessons-scheduler",
     "pluralName": "lessons-schedulers",
-    "displayName": "lessons_scheduler",
+    "displayName": "Lessons Scheduler",
     "description": ""
   },
   "options": {

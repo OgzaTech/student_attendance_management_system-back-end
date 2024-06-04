@@ -869,7 +869,7 @@ export interface ApiLessonsSchedulerLessonsScheduler
   info: {
     singularName: 'lessons-scheduler';
     pluralName: 'lessons-schedulers';
-    displayName: 'lessons_scheduler';
+    displayName: 'Lessons Scheduler';
     description: '';
   };
   options: {
@@ -1028,7 +1028,7 @@ export interface ApiStudentControlStudentControl extends Schema.CollectionType {
   info: {
     singularName: 'student-control';
     pluralName: 'student-controls';
-    displayName: 'Student_control';
+    displayName: 'Student Control';
     description: '';
   };
   options: {
@@ -1036,7 +1036,7 @@ export interface ApiStudentControlStudentControl extends Schema.CollectionType {
   };
   attributes: {
     start: Attribute.DateTime & Attribute.Required;
-    end: Attribute.DateTime & Attribute.Required;
+    end: Attribute.DateTime;
     lessons_scheduler: Attribute.Relation<
       'api::student-control.student-control',
       'oneToOne',
@@ -1139,7 +1139,7 @@ export interface ApiUserLessonUserLesson extends Schema.CollectionType {
   info: {
     singularName: 'user-lesson';
     pluralName: 'user-lessons';
-    displayName: 'User_lesson';
+    displayName: 'User Lesson';
     description: '';
   };
   options: {

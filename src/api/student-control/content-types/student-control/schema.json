@@ -4,7 +4,7 @@
   "info": {
     "singularName": "student-control",
     "pluralName": "student-controls",
-    "displayName": "Student_control",
+    "displayName": "Student Control",
     "description": ""
   },
   "options": {
@@ -18,7 +18,7 @@
     },
     "end": {
       "type": "datetime",
-      "required": true
+      "required": false
     },
     "lessons_scheduler": {
       "type": "relation",
