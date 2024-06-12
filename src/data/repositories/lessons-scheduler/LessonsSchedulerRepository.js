@@ -10,7 +10,7 @@ module.exports = class LessonSchedulerRepository {
           student: {
             card_id: cardId
           },
-          lesson: {
+          /*lesson: {
             lessons_scheduler: {
               $and: [{
                 start_time: {$lte: date}
@@ -18,7 +18,7 @@ module.exports = class LessonSchedulerRepository {
                 finish_time: {$gte: date}
               }],
             }
-          }
+          }*/
         }, populate: ['lesson.lessons_scheduler']
       });
       if (!data || !data.lesson || !data.lesson.lessons_scheduler) return null;
