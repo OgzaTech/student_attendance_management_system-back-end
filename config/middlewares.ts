@@ -3,8 +3,12 @@ export default [
   'strapi::errors',
   'strapi::security',
   'strapi::cors',
-  'strapi::poweredBy',
-  'strapi::query',
+  {
+    name: 'strapi::poweredBy',
+    config: {
+      poweredBy: 'OgzaTech'
+    },
+  },  'strapi::query',
   'strapi::body',
   'strapi::session',
   'strapi::favicon',

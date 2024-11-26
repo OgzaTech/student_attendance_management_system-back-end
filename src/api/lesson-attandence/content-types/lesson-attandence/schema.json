@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lesson_attandences",
+  "info": {
+    "singularName": "lesson-attandence",
+    "pluralName": "lesson-attandences",
+    "displayName": "LessonAttandence",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lessonStudents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lesson-student.lesson-student"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "lesson": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::lesson.lesson"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lesson_students",
+  "info": {
+    "singularName": "lesson-student",
+    "pluralName": "lesson-students",
+    "displayName": "LessonStudent"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lesson": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::lesson.lesson"
+    },
+    "student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::student.student"
+    }
+  }
+}
