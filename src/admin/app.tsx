@@ -18,7 +18,7 @@ export default {
 
 
     tutorials: false,
-    notifications: { releases: false },
+    notifications: {releases: false},
 
     translations: {
       en: {
@@ -33,4 +33,13 @@ export default {
   async bootstrap() {
     document.title = 'Dashboard';
   },
+
+  register(app: any) {
+    const indexRoute = app.router.routes.find(({index}: any) => index);
+    if (!indexRoute) throw new Error('unable to find index page');
+    indexRoute.lazy = async () => {
+      const {Home} = await import('./pages/Home');
+      return {Component: Home};
+    };
+  }
 };
